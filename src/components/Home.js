@@ -6,14 +6,10 @@ const useStyles = makeStyles((theme) => ({
   root: {},
 }))
 
-function Contact() {
+function Home() {
   const classes = useStyles()
 
-  return (
-    <div className={classes.root}>
-      <h1>Contact</h1>
-    </div>
-  )
+  return <div className={classes.root}></div>
 }
 
-export default Contact
+export default Home

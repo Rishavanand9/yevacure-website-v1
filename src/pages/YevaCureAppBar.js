@@ -22,9 +22,13 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     '&:hover': {
       boxShadow: `0 0 40px ${COLORS.col4}`,
-      transform: 'rotateZ(720deg)',
-      transition: '0.4s ease',
+      transform: 'rotateZ(180deg)',
+      transition: '1.0s ease',
     },
+  },
+  scaleImage: {
+    transform: 'scale(0.7)',
+    margin: '-10px',
   },
   title: {
     flexGrow: 1,
@@ -34,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   title2: {
     flexGrow: 1,
     textAlign: 'center',
-    display: 'flex',
+    display: 'block',
     alignItems: 'center',
     color: `${COLORS.col5}`,
   },
@@ -78,12 +82,17 @@ export default function YevaCureAppBar(props) {
       >
         <Toolbar className={classes.toolBar}>
           <div className={!isFixed ? classes.title : classes.title2}>
-            <img src={logo} alt="Logo" height={100} />
+            <img
+              src={logo}
+              alt="Logo"
+              height={100}
+              className={isFixed ? classes.scaleImage : null}
+            />
             <Typography variant="h4">YEVACURE</Typography>
             {!isFixed && (
               <>
                 <Typography variant="h4">PHARMACEUTICALS</Typography>
-                <Typography variant="h6">Health done right</Typography>
+                <Typography variant="overline">Health done right</Typography>
               </>
             )}
           </div>
