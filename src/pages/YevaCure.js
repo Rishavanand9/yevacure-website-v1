@@ -7,6 +7,8 @@ import YevaCureAppBar from './YevaCureAppBar'
 import YevaCureFooter from './YevaCureFooter'
 import Contact from './../components/Contact'
 import Home from './../components/Home'
+import About from './../components/About'
+import Products from './../components/Products'
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -17,26 +19,33 @@ const useStyles = makeStyles((theme) => ({
 function YevaCure() {
   const classes = useStyles()
   const [header, setHeader] = useState(false)
+  const page = window.location.pathname
 
   const onScroll = () => {
-    const scrollY = window.scrollY > 120 ? true : false //Don't get confused by what's scrolling - It's not the window
+    const scrollY = window.scrollY > 120 ? true : false
     setHeader(scrollY)
   }
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll)
-  })
+  }, [page])
 
   return (
     <>
       <YevaCureAppBar isFixed={header} />
       <Router>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/contact-us">
+          <Route exact path="/contact-us">
             <Contact />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/products">
+            <Products />
           </Route>
         </Switch>
       </Router>

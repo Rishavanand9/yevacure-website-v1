@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     width: '100%',
     height: 'fit-content',
-    marginTop: '14em',
+    marginTop: '17em',
     borderRadius: '10px',
     left: '0px',
     background: `#f8ffef`,

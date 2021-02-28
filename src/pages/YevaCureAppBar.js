@@ -3,11 +3,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import CloseIcon from '@material-ui/icons/Close'
-import Button from '@material-ui/core/Button'
 import logo from './../assets/logo.png'
+import withWidth from '@material-ui/core/withWidth'
+import Menu from './../components/Menu'
 import { COLORS } from './../constants/colors'
 
 const useStyles = makeStyles((theme) => ({
@@ -15,16 +13,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '-webkit-fill-available',
     margin: -8,
-  },
-  menuButton: {
-    color: `${COLORS.col4}`,
-    border: `2px solid ${COLORS.col4}`,
-    margin: 'auto',
-    '&:hover': {
-      boxShadow: `0 0 40px ${COLORS.col4}`,
-      transform: 'rotateZ(180deg)',
-      transition: '1.0s ease',
-    },
   },
   scaleImage: {
     transform: 'scale(0.7)',
@@ -45,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     background: `${COLORS.col1}`,
     boxShadow: 'none',
-    padding: '4%',
+    padding: '1% 2%',
     transition: '0.5s',
   },
   appBar2: {
@@ -69,9 +57,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function YevaCureAppBar(props) {
+function YevaCureAppBar(props) {
   const classes = useStyles()
-  const [menu, setMenu] = useState(false)
+  const { width } = props
+  const isMobile = width == 'xs' || width == 'sm ' ? true : false
   const { isFixed } = props
 
   return (
@@ -96,21 +85,11 @@ export default function YevaCureAppBar(props) {
               </>
             )}
           </div>
-
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={(e) => {
-              e.stopPropagation()
-              setMenu(!menu)
-            }}
-          >
-            {!menu ? <MenuRoundedIcon /> : <CloseIcon />}
-          </IconButton>
         </Toolbar>
+        <Menu />
       </AppBar>
     </div>
   )
 }
+
+export default withWidth()(YevaCureAppBar)

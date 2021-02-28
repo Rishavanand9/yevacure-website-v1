@@ -6,14 +6,14 @@ const useStyles = makeStyles((theme) => ({
   root: {},
 }))
 
-function Home() {
+function Products() {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <h1>Home</h1>
+      <h1>Products</h1>
     </div>
   )
 }
 
-export default Home
+export default Products
