@@ -32,16 +32,19 @@ function Menu() {
 
   return (
     <div className={classes.root}>
+      {/*
       <a href="/" className={classes.link}>
         <Typography variant={'overline'} className={classes.menu}>
           Home
         </Typography>
       </a>
+
       <a href="/about" className={classes.link}>
         <Typography variant={'overline'} className={classes.menu}>
           About
         </Typography>
       </a>
+      */}
       <a href="/products" className={classes.link}>
         <Typography variant={'overline'} className={classes.menu}>
           Products
