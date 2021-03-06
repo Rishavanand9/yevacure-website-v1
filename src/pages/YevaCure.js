@@ -21,14 +21,16 @@ function YevaCure() {
   const [header, setHeader] = useState(false)
   const page = window.location.pathname
 
+  /*
   const onScroll = () => {
-    const scrollY = window.scrollY > 120 ? true : false
+    const scrollY = window.scrollY > 100 ? true : false
     setHeader(scrollY)
   }
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll)
   }, [page])
+  */
 
   return (
     <>

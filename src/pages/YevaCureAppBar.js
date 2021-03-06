@@ -8,11 +8,12 @@ import withWidth from '@material-ui/core/withWidth'
 import Menu from './../components/Menu'
 import { COLORS } from './../constants/colors'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: '-webkit-fill-available',
+    width: '105%',
     margin: -8,
   },
   animatedbounce: {
@@ -47,11 +48,11 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none',
     height: '100vh',
     padding: '1% 2%',
-    transition: '0.5s',
+    transition: 'all 0.5s ease',
   },
   appBar2: {
     position: 'fixed',
-    transition: '0.5s',
+    transition: 'all 0.5s ease',
     height: 'auto',
     top: 0,
     background: `${COLORS.col1}`,
@@ -70,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
 function YevaCureAppBar(props) {
   const classes = useStyles()
   const { width } = props
+  const [arrow, setArrow] = useState(false)
   const isMobile = width == 'xs' || width == 'sm ' ? true : false
   const { isFixed } = props
 
@@ -82,7 +84,11 @@ function YevaCureAppBar(props) {
         <Typography variant="caption">Health done right</Typography>
       </>
       <div className={classes.wrap}>
-        <KeyboardArrowDownIcon fontSize="large" />
+        {!arrow ? (
+          <KeyboardArrowDownIcon fontSize="large" />
+        ) : (
+          <KeyboardArrowUpIcon fontSize="large" />
+        )}
       </div>
     </div>
   )
@@ -100,12 +106,16 @@ function YevaCureAppBar(props) {
         <Typography variant="h5">Health done right</Typography>
       </>
       <div className={classes.wrap}>
-        <KeyboardArrowDownIcon fontSize="large" />
+        {!arrow ? (
+          <KeyboardArrowDownIcon fontSize="large" />
+        ) : (
+          <KeyboardArrowUpIcon fontSize="large" />
+        )}
       </div>
     </div>
   )
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="currentAppBar">
       <AppBar
         position="static"
         className={!isFixed ? classes.appBar : classes.appBar2}
