@@ -7,12 +7,19 @@ import logo from './../assets/logo.png'
 import withWidth from '@material-ui/core/withWidth'
 import Menu from './../components/Menu'
 import { COLORS } from './../constants/colors'
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '-webkit-fill-available',
     margin: -8,
+  },
+  animatedbounce: {
+    textAlign: 'center',
+  },
+  wrap: {
+    margin: '3em auto 3em auto',
   },
   scaleImage: {
     transform: 'scale(0.7)',
@@ -23,37 +30,40 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: `${COLORS.col3}`,
   },
+  title3: {
+    margin: 'auto',
+    color: `${COLORS.col3}`,
+  },
   title2: {
     flexGrow: 1,
     textAlign: 'center',
     display: 'block',
     alignItems: 'center',
-    color: `${COLORS.col5}`,
+    marginTop: '10em',
+    color: `${COLORS.col3}`,
   },
   appBar: {
     background: `${COLORS.col1}`,
     boxShadow: 'none',
+    height: '100vh',
     padding: '1% 2%',
     transition: '0.5s',
   },
   appBar2: {
     position: 'fixed',
     transition: '0.5s',
+    height: 'auto',
     top: 0,
-    background: '#222629d6',
+    background: `${COLORS.col1}`,
     paddingBottom: '16px',
     boxShadow: '0 10px 6px -6px #61892f',
   },
   toolBar: {
     alignItems: 'flex-end',
   },
-  button: {
-    color: '#61892f',
-    borderRadius: '2em',
-    border: `2px solid ${COLORS.col4}`,
-    '&:hover': {
-      boxShadow: `0 0 40px ${COLORS.col4}`,
-    },
+
+  fixedAppBarInner: {
+    display: 'flex',
   },
 }))
 
@@ -63,30 +73,57 @@ function YevaCureAppBar(props) {
   const isMobile = width == 'xs' || width == 'sm ' ? true : false
   const { isFixed } = props
 
+  const MobileAppBar = (
+    <div className={classes.title2}>
+      <img src={logo} alt="Logo" height={100} />
+      <Typography variant="h4">YEVACURE</Typography>
+      <>
+        <Typography variant="h4">PHARMACEUTICALS</Typography>
+        <Typography variant="caption">Health done right</Typography>
+      </>
+      <div className={classes.wrap}>
+        <KeyboardArrowDownIcon fontSize="large" />
+      </div>
+    </div>
+  )
+
+  const DesktopAppBar = (
+    <div className={classes.title}>
+      <img
+        src={logo}
+        alt="Logo"
+        className={isFixed ? classes.scaleImage : null}
+      />
+      <Typography variant="h2">YEVACURE</Typography>
+      <>
+        <Typography variant="h2">PHARMACEUTICALS</Typography>
+        <Typography variant="h5">Health done right</Typography>
+      </>
+      <div className={classes.wrap}>
+        <KeyboardArrowDownIcon fontSize="large" />
+      </div>
+    </div>
+  )
   return (
     <div className={classes.root}>
       <AppBar
         position="static"
         className={!isFixed ? classes.appBar : classes.appBar2}
       >
+        {!isFixed && <Menu />}
         <Toolbar className={classes.toolBar}>
-          <div className={!isFixed ? classes.title : classes.title2}>
-            <img
-              src={logo}
-              alt="Logo"
-              height={100}
-              className={isFixed ? classes.scaleImage : null}
-            />
-            <Typography variant="h4">YEVACURE</Typography>
-            {!isFixed && (
-              <>
-                <Typography variant="h4">PHARMACEUTICALS</Typography>
-                <Typography variant="overline">Health done right</Typography>
-              </>
-            )}
-          </div>
+          {!isFixed && !isMobile && DesktopAppBar}
+          {!isFixed && isMobile && MobileAppBar}
+          {isFixed && (
+            <div className={classes.fixedAppBarInner}>
+              <Menu />
+              <img src={logo} height={isMobile ? 85 : 100} />
+              <Typography variant="h5" className={classes.title3}>
+                YEVACURE
+              </Typography>
+            </div>
+          )}
         </Toolbar>
-        <Menu />
       </AppBar>
     </div>
   )
