@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuOption: {
     background: `${COLORS.col1}`,
-    width: '15em',
+    width: '20em',
     height: '100vh',
     textAlign: 'center',
   },
