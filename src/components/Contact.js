@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Card, CardContent, Hidden } from '@material-ui/core'
 import { COLORS } from './../constants/colors'
+import card from './../assets/card.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title1: {
     textAlign: 'center',
-    color: `${COLORS.col5}`,
+    color: `${COLORS.col4}`,
     textDecoration: 'none',
     '&:hover': {
       color: `${COLORS.col5}`,
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardRoot: {
     background: `white`,
+    backgroundImage: `url(${card})`,
     border: `none`,
     boxShadow: `0 11px 6px -4px${COLORS.col1}`,
   },
