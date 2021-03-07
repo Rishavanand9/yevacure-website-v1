@@ -121,7 +121,7 @@ function Contact() {
               </Typography>
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdaB1vGN0KHxc1Tr2eDH8pcQCrLNW5PCX8CxdIms_HOwrnekg/viewform?embedded=true"
-                width="700"
+                width="600"
                 height="1200"
                 frameborder="0"
                 marginheight="0"
