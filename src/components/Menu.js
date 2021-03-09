@@ -59,8 +59,8 @@ const useStyles = makeStyles((theme) => ({
 
 const menuOptionValues = [
   { name: 'Home', path: '/', icon: '' },
-  { name: 'Products', path: '/produts', icon: '' },
-  { name: 'Contact Us', path: 'contact-us', icon: '' },
+  { name: 'Products', path: '/products', icon: '' },
+  { name: 'Contact Us', path: '/contact-us', icon: '' },
 ]
 
 function Menu(props) {

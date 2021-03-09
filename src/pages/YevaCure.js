@@ -8,7 +8,8 @@ import YevaCureFooter from './YevaCureFooter'
 import Contact from './../components/Contact'
 import Home from './../components/Home'
 import About from './../components/About'
-import Products from './../components/Products'
+import Products from '../components/products/Product-list'
+import ProductDescription from "../components/products/Product-Description"
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -46,6 +47,9 @@ function YevaCure() {
           </Route>
           <Route exact path="/products">
             <Products />
+          </Route>
+          <Route exact path="/products/product-desc">
+            <ProductDescription/>
           </Route>
         </Switch>
       </Router>
