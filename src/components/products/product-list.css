@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-row-gap: 5vw;
+    margin-top: 2em;
 }
 
 .product-list-card{

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
+import ImageDisplay from './ImageDisplay/ImageDisplay'
+import Description from './Description/Description'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
+    marginTop: '2em',
   },
 }))
 
@@ -13,7 +16,8 @@ function Home() {
 
   return (
     <div className={classes.root}>
-      <h1>Home</h1>
+      <ImageDisplay />
+      <Description />
     </div>
   )
 }

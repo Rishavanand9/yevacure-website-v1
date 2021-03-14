@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   Typography,
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: 'none',
     textAlign: 'center',
+    marginRight: '32px',
   },
   button: {
     color: '#61892f',
@@ -38,9 +39,20 @@ const useStyles = makeStyles((theme) => ({
     color: `${COLORS.col4}`,
     textDecoration: 'none',
     '&:hover': {
-      color: `${COLORS.col3}`,
+      color: `${COLORS.col5}`,
       cursor: 'pointer',
-      letterSpacing: '8px',
+      letterSpacing: '5px',
+      transition: '0.5s',
+    },
+  },
+  menu2: {
+    textAlign: 'start',
+    color: `${COLORS.col4}`,
+    textDecoration: 'none',
+    '&:hover': {
+      color: `${COLORS.col5}`,
+      cursor: 'pointer',
+      transform: 'scale(1.2)',
       transition: '0.5s',
     },
   },
@@ -54,6 +66,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0), ${COLORS.col4}, rgba(0, 0, 0, 0))`,
     height: '2px',
     margin: 'auto',
+  },
+  menuContainer: {
+    height: '80px',
+  },
+  menuItems: {
+    display: 'flex',
+    position: 'absolute',
+    left: '5%',
   },
 }))
 
@@ -105,14 +125,35 @@ function Menu(props) {
     </div>
   )
 
+  const DesktopMenu = (
+    <div className={classes.menuContainer}>
+      <List className={classes.menuItems}>
+        {menuOptionValues.map((item) => {
+          return (
+            <>
+              <a href={item.path} className={classes.link}>
+                <Typography variant={'h6'} className={classes.menu2}>
+                  {item.name}{' '}
+                </Typography>
+              </a>
+            </>
+          )
+        })}
+      </List>
+    </div>
+  )
+
   return (
     <div className={!isMobile ? classes.root : classes.root2}>
-      <IconButton
-        className={classes.button}
-        onClick={toggleDrawer('left', true)}
-      >
-        <MenuRoundedIcon />
-      </IconButton>
+      {(isMobile && (
+        <IconButton
+          className={classes.button}
+          onClick={toggleDrawer('left', true)}
+        >
+          <MenuRoundedIcon />
+        </IconButton>
+      )) ||
+        DesktopMenu}
       <SwipeableDrawer
         anchor={'left'}
         open={state['left']}

@@ -19,9 +19,6 @@ const useStyles = makeStyles((theme) => ({
   animatedbounce: {
     textAlign: 'center',
   },
-  wrap: {
-    margin: '3em auto 3em auto',
-  },
   scaleImage: {
     transform: 'scale(0.7)',
     margin: '-10px',
@@ -40,24 +37,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     display: 'block',
     alignItems: 'center',
-    marginTop: '10em',
     color: `${COLORS.col3}`,
   },
   appBar: {
     background: `${COLORS.col1}`,
     boxShadow: 'none',
-    height: '100vh',
     padding: '1% 2%',
     transition: 'all 0.5s ease',
-  },
-  appBar2: {
-    position: 'fixed',
-    transition: 'all 0.5s ease',
-    height: 'auto',
-    top: 0,
-    background: `${COLORS.col1}`,
-    paddingBottom: '16px',
-    boxShadow: '0 10px 6px -6px #61892f',
   },
   toolBar: {
     alignItems: 'flex-end',
@@ -73,7 +59,6 @@ function YevaCureAppBar(props) {
   const { width } = props
   const [arrow, setArrow] = useState(false)
   const isMobile = width == 'xs' || width == 'sm ' ? true : false
-  const { isFixed } = props
 
   const MobileAppBar = (
     <div className={classes.title2}>
@@ -83,56 +68,26 @@ function YevaCureAppBar(props) {
         <Typography variant="h4">PHARMACEUTICALS</Typography>
         <Typography variant="caption">Health done right</Typography>
       </>
-      <div className={classes.wrap}>
-        {!arrow ? (
-          <KeyboardArrowDownIcon fontSize="large" />
-        ) : (
-          <KeyboardArrowUpIcon fontSize="large" />
-        )}
-      </div>
     </div>
   )
 
   const DesktopAppBar = (
     <div className={classes.title}>
-      <img
-        src={logo}
-        alt="Logo"
-        className={isFixed ? classes.scaleImage : null}
-      />
+      <img src={logo} alt="Logo" height={200} />
       <Typography variant="h2">YEVACURE</Typography>
       <>
         <Typography variant="h2">PHARMACEUTICALS</Typography>
         <Typography variant="h5">Health done right</Typography>
       </>
-      <div className={classes.wrap}>
-        {!arrow ? (
-          <KeyboardArrowDownIcon fontSize="large" />
-        ) : (
-          <KeyboardArrowUpIcon fontSize="large" />
-        )}
-      </div>
     </div>
   )
   return (
     <div className={classes.root} id="currentAppBar">
-      <AppBar
-        position="static"
-        className={!isFixed ? classes.appBar : classes.appBar2}
-      >
-        {!isFixed && <Menu />}
+      <AppBar position="static" className={classes.appBar}>
+        <Menu />
         <Toolbar className={classes.toolBar}>
-          {!isFixed && !isMobile && DesktopAppBar}
-          {!isFixed && isMobile && MobileAppBar}
-          {isFixed && (
-            <div className={classes.fixedAppBarInner}>
-              <Menu />
-              <img src={logo} height={isMobile ? 85 : 100} />
-              <Typography variant="h5" className={classes.title3}>
-                YEVACURE
-              </Typography>
-            </div>
-          )}
+          {!isMobile && DesktopAppBar}
+          {isMobile && MobileAppBar}
         </Toolbar>
       </AppBar>
     </div>

@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: `100vh`,
     position: 'relative',
-    marginTop: `20em`,
+    marginTop: `2em`,
   },
   title: {
     textAlign: 'center',
