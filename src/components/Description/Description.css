@@ -1,0 +1,30 @@
+.descriptionGrid{
+    display: flex;
+}
+
+.descriptionItemGrid{}
+
+.descriptionText1{
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: justify;
+    margin-top: 3%;
+    text-align: left;
+    color: #222629;
+    margin-bottom: 2em;
+}
+
+.descriptionText1 > p{
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 3%;
+    text-align: left;
+    color: #6B6E70;
+    margin-bottom: 2em;
+}

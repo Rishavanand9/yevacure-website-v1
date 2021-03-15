@@ -1,5 +1,6 @@
 .product-desc-root{
     display: flex;
+    margin: 2em;
 }
 
 .product-photos-vertical {
