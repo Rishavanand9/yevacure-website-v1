@@ -17,7 +17,7 @@ function ProductDescription() {
         <img
           className="product-image-small"
           src={Img1}
-          alt="error"
+          ḁlt="error"
           onMouseEnter={() => changeImage(Img1)}
         />
         <img
