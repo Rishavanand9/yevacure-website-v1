@@ -7,7 +7,7 @@ import Description from './Description/Description'
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    marginTop: '2em',
+    marginTop: '10em',
   },
 }))
 

@@ -11,14 +11,9 @@ import { COLORS } from './../constants/colors'
 import withWidth from '@material-ui/core/withWidth'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import logo from './../assets/logo.png'
+import logoName from './../assets/logoName.png'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: 'auto',
-  },
-  root2: {
-    margin: '2em auto 2em auto',
-  },
   link: {
     textDecoration: 'none',
     textAlign: 'center',
@@ -34,9 +29,8 @@ const useStyles = makeStyles((theme) => ({
   menu: {
     marginLeft: '5%',
     marginTop: '5%',
-    marginBottom: '5%',
     textAlign: 'start',
-    color: `${COLORS.col4}`,
+    color: `${COLORS.col1}`,
     textDecoration: 'none',
     '&:hover': {
       color: `${COLORS.col5}`,
@@ -49,17 +43,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'start',
     color: `${COLORS.col4}`,
     textDecoration: 'none',
+    padding: '4px',
     '&:hover': {
-      color: `${COLORS.col5}`,
+      color: `${COLORS.col3}`,
+      textDecoration: 'underline',
       cursor: 'pointer',
       transform: 'scale(1.2)',
-      transition: '0.5s',
+      transition: '0.3s',
     },
   },
   menuOption: {
-    background: `${COLORS.col1}`,
+    background: `white`,
     width: '20em',
-    height: '100vh',
     textAlign: 'center',
   },
   hr: {
@@ -68,12 +63,23 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
   },
   menuContainer: {
-    height: '80px',
+    display: 'flex',
+    alignItems: 'center',
   },
   menuItems: {
     display: 'flex',
-    position: 'absolute',
+    left: '70%',
+  },
+  logo: {
+    display: 'flex',
     left: '5%',
+  },
+  logoImg: {
+    marginLeft: '10%',
+  },
+  menuDiv: {
+    position: 'absolute',
+    right: '20em',
   },
 }))
 
@@ -105,7 +111,7 @@ function Menu(props) {
 
   const MenuOptions = (
     <div className={classes.menuOption}>
-      <img src={logo} height={50} />
+      <img src={logo} height={50} className={classes.logoImg} />
 
       <hr />
       <List>
@@ -127,19 +133,25 @@ function Menu(props) {
 
   const DesktopMenu = (
     <div className={classes.menuContainer}>
-      <List className={classes.menuItems}>
-        {menuOptionValues.map((item) => {
-          return (
-            <>
-              <a href={item.path} className={classes.link}>
-                <Typography variant={'h6'} className={classes.menu2}>
-                  {item.name}{' '}
-                </Typography>
-              </a>
-            </>
-          )
-        })}
-      </List>
+      <div>
+        <img src={logo} height={100} />
+        <img src={logoName} height={60} />
+      </div>
+      <div className={classes.menuDiv}>
+        <List className={classes.menuItems}>
+          {menuOptionValues.map((item) => {
+            return (
+              <>
+                <a href={item.path} className={classes.link}>
+                  <Typography variant={'h6'} className={classes.menu2}>
+                    {item.name}{' '}
+                  </Typography>
+                </a>
+              </>
+            )
+          })}
+        </List>
+      </div>
     </div>
   )
 

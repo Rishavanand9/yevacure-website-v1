@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './ImageDisplay.css'
+import homeAnimation from '../../assets/homeAnimation.gif'
 import withWidth from '@material-ui/core/withWidth'
 
 //Test Images
@@ -38,23 +39,22 @@ function ImageDisplay(props) {
   useEffect(() => {
     setTimeout(() => {
       handleNext()
-    }, 6500)
+    }, 3000)
   })
 
   return (
     <div class="slideshow-container">
+      <img src={homeAnimation} class={isMobile ? 'imgStyle2' : 'imgStyle'} />
+      {/*
       {Images.map((item, index) => {
         if (index === currentSlide) {
           return (
-            <div class="mySlides fade">
+            <div class="mySlides">
               <img src={item} class={isMobile ? 'imgStyle2' : 'imgStyle'} />
             </div>
           )
         }
       })}
-
-      {/* TODO Enable Click Listeners if needed */}
-      {/*
       <a class="prev" onClick={handlePrev}>
         &#10094;
       </a>
