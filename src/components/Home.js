@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 import ImageDisplay from './ImageDisplay/ImageDisplay'
-import Description from './Description/Description'
+import Overview from './Overview/Overview'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ function Home() {
   return (
     <div className={classes.root}>
       <ImageDisplay />
-      <Description />
+      <Overview />
     </div>
   )
 }

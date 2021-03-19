@@ -44,7 +44,9 @@ function ImageDisplay(props) {
 
   return (
     <div class="slideshow-container">
-      <img src={homeAnimation} class={isMobile ? 'imgStyle2' : 'imgStyle'} />
+      <div class="mySlides">
+      <img src={homeAnimation}/>
+      </div>
       {/*
       {Images.map((item, index) => {
         if (index === currentSlide) {
