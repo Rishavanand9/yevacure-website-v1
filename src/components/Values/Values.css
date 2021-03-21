@@ -1,0 +1,46 @@
+.values-root{
+    position: relative;
+    padding: 2em;
+    margin: 0% 4% 8% 4%;
+    text-align: center;
+}
+
+.values-h1{
+        font-family: Inter;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: #3e8927
+}
+
+.values.img{
+    text-align: center  ;
+    width: 80vw;
+}
+
+
+.values-h4{
+    font-family: Inter;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgb(46, 45, 45);
+}
+
+.values-content{
+    text-align: center;
+    border-radius: 2em;
+    padding: 10px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset;
+}
+
+.values-p{
+    text-align: left;
+    margin: 2em auto 2em auto;
+    max-width: 80%;
+    min-height: 190px;
+    font-weight: 300;
+    font-family: Inter;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(136, 135, 135);
+}

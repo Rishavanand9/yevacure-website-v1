@@ -1,0 +1,21 @@
+.manufacture-root{
+    position: relative;
+    margin: 5% 4% 1% 4%;
+    padding: 2em;
+}
+
+
+.manufacture-h3{
+    font-family: Inter;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: rgba(63, 62, 62, 0.795);
+}
+
+.manufacture-p{
+    font-family: Inter;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: rgb(136, 135, 135);
+}

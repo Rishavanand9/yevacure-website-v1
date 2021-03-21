@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '5%',
     marginTop: '5%',
     textAlign: 'start',
-    color: `${COLORS.col1}`,
+    color: `${COLORS.col4}`,
     textDecoration: 'none',
     '&:hover': {
-      color: `${COLORS.col5}`,
+      color: `${COLORS.col3}`,
       cursor: 'pointer',
       letterSpacing: '5px',
       transition: '0.5s',
@@ -43,12 +43,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'start',
     color: `${COLORS.col4}`,
     textDecoration: 'none',
+    fontSize: '1rem',
     padding: '4px',
     '&:hover': {
       color: `${COLORS.col3}`,
-      textDecoration: 'underline',
       cursor: 'pointer',
-      transform: 'scale(1.2)',
+      transform: 'scale(1.3)',
       transition: '0.3s',
     },
   },
@@ -74,9 +74,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     left: '5%',
   },
-  logoImg: {
-    marginLeft: '10%',
-  },
+  logoImg: {},
   menuDiv: {
     position: 'absolute',
     right: '20em',
@@ -112,7 +110,7 @@ function Menu(props) {
   const MenuOptions = (
     <div className={classes.menuOption}>
       <img src={logo} height={50} className={classes.logoImg} />
-
+      <img src={logoName} height={30} />
       <hr />
       <List>
         {menuOptionValues.map((item) => {
@@ -134,8 +132,8 @@ function Menu(props) {
   const DesktopMenu = (
     <div className={classes.menuContainer}>
       <div>
-        <img src={logo} height={100} />
-        <img src={logoName} height={60} />
+        <img src={logo} height={50} />
+        <img src={logoName} height={30} />
       </div>
       <div className={classes.menuDiv}>
         <List className={classes.menuItems}>
@@ -163,6 +161,7 @@ function Menu(props) {
           onClick={toggleDrawer('left', true)}
         >
           <MenuRoundedIcon />
+          <img src={logoName} height={30} />
         </IconButton>
       )) ||
         DesktopMenu}

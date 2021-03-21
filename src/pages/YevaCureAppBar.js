@@ -17,10 +17,12 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'fixed',
     top: 0,
+    left: 0,
     background: `white`,
     boxShadow: 'none',
     padding: '1.5em',
     transition: 'all 0.5s ease',
+    boxShadow: '0 6px 10px #afccb2',
   },
   toolBar: {
     alignItems: 'flex-end',
