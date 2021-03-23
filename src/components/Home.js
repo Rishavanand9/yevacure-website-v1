@@ -25,7 +25,7 @@ function Home() {
       <VisionMission />
       <Manufacture />
       <Values />
-      {/*<Proficiency />*/}
+      <Proficiency />
     </div>
   )
 }

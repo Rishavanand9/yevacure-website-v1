@@ -7,8 +7,26 @@
 
 .proficiency-h1{
         font-family: Inter;
-        font-size: 24px;
+        font-size: 36px;
         text-align: center;
         letter-spacing: 2px;
         color: #3047d8
+}
+
+.proficiency-content{
+    border-radius: 2em;
+    padding: 10px;
+    min-height: 100px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset;
+}
+
+.proficiency-content > h2{
+    font-family: Inter;
+    margin-top: 2em;
+    font-size: 20px;
+}
+
+.proficiency-img{
+    width: 100%;
+    height: 80%
 }
