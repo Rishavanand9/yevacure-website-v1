@@ -20,7 +20,7 @@ function Manufacture() {
   const DescriptionBlock = (
     <div>
       <h3 class="manufacture-h3">
-        Manufacturing<b class="overview-cure">&bull;</b>
+        Manufacturing<b class="overview-cure">.</b>
         <b class="overview-yeva">&bull;</b>
       </h3>
       <p class="manufacture-p">

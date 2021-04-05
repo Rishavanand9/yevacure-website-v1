@@ -1,4 +1,6 @@
-export const ProductsDetails = [
+export const YevaDermiProductDetails = []
+
+export const YevaVetProductDetails = [
   {
     productName: 'YEVAMIN',
     productSummary: 'Multivitamin Powder with addition benifits',

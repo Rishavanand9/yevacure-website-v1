@@ -18,7 +18,10 @@ function Products() {
     <div className="product-list-root">
       {images.map((item, index) => {
         return (
-          <div className="product-list-card" key={index}>
+          <div className = "flip-card">
+          <div className="product-list-card-inner" key={index}>
+            
+            <div className ="flip-card-front">
             <img className="product-list-image" src={ProductLogo} alt="error" />
             <div className="product-list-container">
               <div className="product-name">Product Name</div>
@@ -30,6 +33,13 @@ function Products() {
             <Link to="/products/product-desc">
               <button className="product-list-know-more">Know More</button>
             </Link>
+            </div>
+
+            <div className = "flip-card-back">
+              <p>lorem ipsum lorem ipsum lorem ipsum</p>
+            </div>
+            
+          </div>
           </div>
         )
       })}

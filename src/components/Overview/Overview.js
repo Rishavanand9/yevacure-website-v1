@@ -20,7 +20,7 @@ function Overview() {
   const DescriptionBlock = (
     <div>
       <h1 class="overview-h1">
-        Overview<b class="overview-yeva">&bull;</b>
+        Overview<b class="overview-yeva">.</b>
         <b class="overview-cure">&bull;</b>
       </h1>
       <p class="overview-p">
