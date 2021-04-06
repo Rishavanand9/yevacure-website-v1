@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'fit-content',
     borderRadius: '10px',
     left: '0px',
-    background: `#f8ffef`,
+    background: 'rgb(164 158 247 / 10%)',
     textAlign: 'center',
   },
   info: {

@@ -24,9 +24,6 @@ function Manufacture() {
         <b class="overview-yeva">&bull;</b>
       </h3>
       <p class="manufacture-p">
-        The quality verdict at is a parlance that is beyond any competition.{' '}
-      </p>
-      <p class="manufacture-p">
         {yevacure} manufactures its quality health products in the finest
         manufacturing facility that has been set up meeting stringent guidelines
         of any regulatory body including World Health Organization.

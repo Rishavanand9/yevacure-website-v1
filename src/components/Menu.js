@@ -12,6 +12,7 @@ import withWidth from '@material-ui/core/withWidth'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
 import logo from './../assets/logo.png'
 import logoName from './../assets/logoName.png'
+import { Redirect } from 'react-router'
 
 const useStyles = makeStyles((theme) => ({
   link: {
