@@ -122,7 +122,7 @@ function Menu(props) {
                   {item.name}{' '}
                 </Typography>
               </a>
-              <Divider className={classes.hr} />
+              {/*<Divider className={classes.hr} />*/}
             </>
           )
         })}

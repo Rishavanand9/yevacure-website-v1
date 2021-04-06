@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductLogo from '../../assets/Products/MagCure/ProdImg1.png'
 import { Link } from 'react-router-dom'
+import Typography from '@material-ui/core/Typography'
 import './product-list.css'
 
 const images = [
@@ -14,6 +15,14 @@ const images = [
 ]
 
 function Products() {
+  return (
+    <div className="product-list-root">
+      Hang on there !!
+      <br />
+      We will update the product details very soon &#128512;
+    </div>
+  )
+  /*
   return (
     <div className="product-list-root">
       {images.map((item, index) => {
@@ -45,6 +54,7 @@ function Products() {
       })}
     </div>
   )
+  */
 }
 
 export default Products
