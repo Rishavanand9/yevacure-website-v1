@@ -17,7 +17,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "PORT=4001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "prettier": "prettier --write 'src/**/*.js'",
