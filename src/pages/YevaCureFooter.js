@@ -78,8 +78,8 @@ function YevaCureFooter() {
 
   const Images = (
     <div className={classes.icons}>
-      <img src={mii} height={50} className={classes.img} alt="mii"/>
-      <img src={iso} height={50} className={classes.img} alt="iso"/>
+      <img src={mii} height={50} className={classes.img} alt="mii" />
+      <img src={iso} height={50} className={classes.img} alt="iso" />
     </div>
   )
 

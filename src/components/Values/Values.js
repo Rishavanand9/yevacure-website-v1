@@ -54,7 +54,12 @@ function Values(props) {
         <b class="overview-cure">&bull;</b> Our Values{' '}
         <b class="overview-cure">&bull;</b>
       </h1>
-      <img src={values} height={isMobile ? 300 : 400} class="values-img" alt=""/>
+      <img
+        src={values}
+        height={isMobile ? 300 : 400}
+        class="values-img"
+        alt=""
+      />
       <Grid container spacing={2}>
         {valuesData.map((item) => {
           return (

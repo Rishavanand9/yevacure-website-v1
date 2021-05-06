@@ -101,7 +101,7 @@ function Contact() {
             'https://docs.google.com/forms/d/e/1FAIpQLSe5__IKq8Maedx0ilQUE-F3rZ4Pv_3APX6OoaM6J7KausorNg/viewform?usp=sf_link'
           }
         >
-          <img src={hiring} className={classes.hiring} alt="hiring"/>
+          <img src={hiring} className={classes.hiring} alt="hiring" />
         </a>
       </CardContent>
     </Card>

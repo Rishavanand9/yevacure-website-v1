@@ -13,7 +13,7 @@ function Overview() {
 
   const OverviewBlock = (
     <div>
-      <img src={overview} class="overview-img" alt="overview"/>
+      <img src={overview} class="overview-img" alt="overview" />
     </div>
   )
 

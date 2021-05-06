@@ -33,7 +33,11 @@ function ImageDisplay(props) {
   return (
     <div class="slideshow-container">
       <div class="mySlides">
-        <img src={homeAnimation} class={isMobile ? 'imgStyle2' : 'imgStyle'} alt="homeAnimation"/>
+        <img
+          src={homeAnimation}
+          class={isMobile ? 'imgStyle2' : 'imgStyle'}
+          alt="homeAnimation"
+        />
       </div>
     </div>
   )

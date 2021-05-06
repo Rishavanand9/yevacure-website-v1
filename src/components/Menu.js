@@ -108,8 +108,8 @@ function Menu(props) {
 
   const MenuOptions = (
     <div className={classes.menuOption}>
-      <img src={logo} height={50} className={classes.logoImg} alt=""/>
-      <img src={logoName} height={30} alt=""/>
+      <img src={logo} height={50} className={classes.logoImg} alt="" />
+      <img src={logoName} height={30} alt="" />
       <hr />
       <List>
         {menuOptionValues.map((item) => {
@@ -131,8 +131,8 @@ function Menu(props) {
   const DesktopMenu = (
     <div className={classes.menuContainer}>
       <div>
-        <img src={logo} height={50} alt=""/>
-        <img src={logoName} height={30} alt=""/>
+        <img src={logo} height={50} alt="" />
+        <img src={logoName} height={30} alt="" />
       </div>
       <div className={classes.menuDiv}>
         <List className={classes.menuItems}>
@@ -160,7 +160,7 @@ function Menu(props) {
           onClick={toggleDrawer('left', true)}
         >
           <MenuRoundedIcon />
-          <img src={logoName} height={30} alt=""/>
+          <img src={logoName} height={30} alt="" />
         </IconButton>
       )) ||
         DesktopMenu}

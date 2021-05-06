@@ -13,7 +13,7 @@ function Manufacture() {
 
   const ImgBlock = (
     <div>
-      <img src={manufacture} class="overview-img" alt="manufacture"/>
+      <img src={manufacture} class="overview-img" alt="manufacture" />
     </div>
   )
 

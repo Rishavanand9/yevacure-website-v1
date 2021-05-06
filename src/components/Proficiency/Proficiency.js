@@ -47,7 +47,7 @@ function Proficiency(props) {
       </h1>
       <Grid container spacing={2}>
         <Grid item md={6} lg={6} xl={6} sm={12} xs={12}>
-          <img src={proficiency} class="proficiency-img" alt="proficiency"/>
+          <img src={proficiency} class="proficiency-img" alt="proficiency" />
         </Grid>
         <Grid item md={6} lg={6} xl={6} sm={12} xs={12}>
           {ProficiencyList.map((item) => {
