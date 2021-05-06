@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Card, CardContent, Hidden } from '@material-ui/core'
 import { COLORS } from './../constants/colors'
-import card from './../assets/card.jpg'
 import hiring from './../assets/hiring.png'
 
 const useStyles = makeStyles((theme) => ({
@@ -75,6 +74,7 @@ function Contact() {
           </Typography>
           <a
             href="mailto:yevacurepharmaceuticals@gmail.com"
+            rel="noreferrer"
             className={classes.title1}
             target="_blank"
           >
@@ -96,11 +96,12 @@ function Contact() {
 
         <a
           target={'_blank'}
+          rel="noreferrer"
           href={
             'https://docs.google.com/forms/d/e/1FAIpQLSe5__IKq8Maedx0ilQUE-F3rZ4Pv_3APX6OoaM6J7KausorNg/viewform?usp=sf_link'
           }
         >
-          <img src={hiring} className={classes.hiring} />
+          <img src={hiring} className={classes.hiring} alt="hiring"/>
         </a>
       </CardContent>
     </Card>
@@ -124,6 +125,7 @@ function Contact() {
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdaB1vGN0KHxc1Tr2eDH8pcQCrLNW5PCX8CxdIms_HOwrnekg/viewform?embedded=true"
                 width="600"
                 height="1200"
+                title="contact"
                 frameborder="0"
                 marginheight="0"
                 marginwidth="0"
@@ -144,6 +146,7 @@ function Contact() {
                 width="400"
                 height="1200"
                 frameborder="0"
+                title="contact"
                 marginheight="0"
                 marginwidth="1"
               >

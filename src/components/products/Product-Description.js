@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ProductLogo from '../../assets/Products/MagCure/ProdImg1.png'
 import Img1 from '../../assets/Products/YevaCal-D3/ProdImg1.png'
 import Img2 from '../../assets/Products/YevaCal-Gel/ProdImg1.png'
@@ -17,7 +17,7 @@ function ProductDescription() {
         <img
           className="product-image-small"
           src={Img1}
-          ḁlt="error"
+          alt="error"
           onMouseEnter={() => changeImage(Img1)}
         />
         <img

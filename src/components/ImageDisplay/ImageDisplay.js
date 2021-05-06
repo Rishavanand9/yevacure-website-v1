@@ -14,19 +14,7 @@ const Images = [
 function ImageDisplay(props) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const { width } = props
-  const isMobile = width == 'xs' || width == 'sm ' ? true : false
-
-  {
-    /*
-  const handlePrev = e =>{
-      if(currentSlide === 0){
-        setCurrentSlide(Images.length - 1)
-      }else{
-        setCurrentSlide(currentSlide -1)
-      }
-  }
-*/
-  }
+  const isMobile = width === 'xs' || width === 'sm ' ? true : false
 
   const handleNext = (e) => {
     if (currentSlide === Images.length - 1) {
@@ -45,25 +33,8 @@ function ImageDisplay(props) {
   return (
     <div class="slideshow-container">
       <div class="mySlides">
-        <img src={homeAnimation} class={isMobile ? 'imgStyle2' : 'imgStyle'} />
+        <img src={homeAnimation} class={isMobile ? 'imgStyle2' : 'imgStyle'} alt="homeAnimation"/>
       </div>
-      {/*
-      {Images.map((item, index) => {
-        if (index === currentSlide) {
-          return (
-            <div class="mySlides">
-              <img src={item} class={isMobile ? 'imgStyle2' : 'imgStyle'} />
-            </div>
-          )
-        }
-      })}
-      <a class="prev" onClick={handlePrev}>
-        &#10094;
-      </a>
-      <a class="next" onClick={handleNext}>
-        &#10095;
-      </a>
-      */}
     </div>
   )
 }

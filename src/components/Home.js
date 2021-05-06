@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
 import ImageDisplay from './ImageDisplay/ImageDisplay'
 import Overview from './Overview/Overview'
 import VisionMission from './VisionMission/VisionMission'

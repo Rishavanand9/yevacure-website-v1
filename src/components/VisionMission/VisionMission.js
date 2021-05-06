@@ -7,7 +7,7 @@ import missionImg from '../../assets/Homepage/missionImg.png'
 function VisionMission() {
   const Vision = (
     <div class="visionmission-content">
-      <img src={visionImg} height={100} />
+      <img src={visionImg} height={100} alt="vision"/>
       <h4 class="visionmission-h4">
         <b class="overview-yeva">&bull;</b> Vision{' '}
         <b class="overview-cure">&bull;</b>
@@ -21,7 +21,7 @@ function VisionMission() {
 
   const Mission = (
     <div class="visionmission-content">
-      <img src={missionImg} height={100} />
+      <img src={missionImg} height={100} alt="mission"/>
       <h4 class="visionmission-h4">
         <b class="overview-yeva">&bull;</b> Mission{' '}
         <b class="overview-cure">&bull;</b>

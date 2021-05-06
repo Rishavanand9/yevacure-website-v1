@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React /*,{ useEffect, useState }*/ from 'react'
+/*
 import ProductLogo from '../../assets/Products/MagCure/ProdImg1.png'
 import { Link } from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
+*/
 import './product-list.css'
 
+/*
 const images = [
   ['MagCure', '../../assets/Products/MagCure/ProdImg1.png'],
   ['ReproCure', '../../assets/Products/ReproCure/ProdImg1.png'],
@@ -13,7 +16,7 @@ const images = [
   ['YevaLiv', '../../assets/Products/YevaLiv/ProdImg1.png'],
   ['YevaminForte', '../../assets/Products/YevaminForte/ProdImg1.png'],
 ]
-
+*/
 function Products() {
   return (
     <div className="product-list-root">

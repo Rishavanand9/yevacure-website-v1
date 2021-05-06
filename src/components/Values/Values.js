@@ -33,7 +33,7 @@ const valuesData = [
 
 function Values(props) {
   const { width } = props
-  const isMobile = width == 'xs' || width == 'sm ' ? true : false
+  const isMobile = width === 'xs' || width === 'sm ' ? true : false
 
   const valueCard = (item) => {
     return (
@@ -54,7 +54,7 @@ function Values(props) {
         <b class="overview-cure">&bull;</b> Our Values{' '}
         <b class="overview-cure">&bull;</b>
       </h1>
-      <img src={values} height={isMobile ? 300 : 400} class="values-img" />
+      <img src={values} height={isMobile ? 300 : 400} class="values-img" alt=""/>
       <Grid container spacing={2}>
         {valuesData.map((item) => {
           return (
