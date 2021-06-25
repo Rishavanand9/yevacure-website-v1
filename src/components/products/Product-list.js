@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './product-list.css'
-
 function Products() {
   return (
     <div className="product-list-root">
