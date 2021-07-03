@@ -1,7 +1,7 @@
 .values-root{
     position: relative;
     padding: 2em;
-    margin: 0% 4% 8% 4%;
+    margin: 0% 4% 0% 4%;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@
     text-align: center;
     border-radius: 2em;
     padding: 10px;
-    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset;
+    border-top: 8px solid #262d7d;
 }
 
 .values-p{

@@ -8,22 +8,22 @@ const ProficiencyList = [
   {
     title: 'Communication and Relationship Management',
     description: '',
-    color: '#ed3833',
+    color: '#419147',
   },
   {
     title: 'Leadership & Professionalism',
     description: '',
-    color: '#fcde5a',
+    color: '#262d7d',
   },
   {
     title: 'Knowledge of the Healthcare Environment',
     description: '',
-    color: '#1256b1',
+    color: '#419147',
   },
   {
     title: 'Business Skills and Knowledge',
     description: '',
-    color: '#398139',
+    color: '#262d7d',
   },
 ]
 
