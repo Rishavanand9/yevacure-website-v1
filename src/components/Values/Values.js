@@ -1,33 +1,32 @@
 import React from 'react'
 import './Values.css'
-import values from '../../assets/Homepage/values.png'
 import { Grid } from '@material-ui/core'
 import withWidth from '@material-ui/core/withWidth'
 
 const valuesData = [
   {
-    title: 'Care for health',
-    color: '#398139',
+    title: 'Best Quality',
+    color: '#419147',
     description:
-      ' We are guided by our commitment to serve human life. To provide the medical community and patients with the most advanced therapies.',
+      'We manufacture the quality that is best in the industry through constant creative research and challenges.',
   },
   {
-    title: 'Honesty and Integrity',
-    color: '#1256b1',
+    title: 'One Company',
+    color: '#262d7d',
     description:
-      'Our commitment to business ethics, fairness, honesty and transparency is equally important to us, as is to achieving business success.',
+      'The authenticity of products lies in complete control over manufacturing right from procurement till shipment.',
   },
   {
-    title: 'Innovation',
-    color: '#fcde5a',
+    title: 'Rich Manufacturing & Marketing Concept',
+    color: '#419147',
     description:
-      'We believe we can make a difference only by thinking beyond the obvious. Prior to every action we take, we always consider new paths, so as to bring true value to the healthcare community.',
+      'Highly Skilled staff constantly thinks about designing the apt manufacturing and marketing strategies of the products.',
   },
   {
-    title: 'Excellence',
-    color: '#ed3833',
+    title: 'People Before Profit',
+    color: '#262d7d',
     description:
-      'We always aim high and demand the best from ourselves and our partners. Success does not make us complacent.',
+      'We stay as a life-long companion of our customer by being considerate towards them.',
   },
 ]
 
@@ -54,12 +53,6 @@ function Values(props) {
         <b class="overview-cure">&bull;</b> Our Values{' '}
         <b class="overview-cure">&bull;</b>
       </h1>
-      <img
-        src={values}
-        height={isMobile ? 300 : 400}
-        class="values-img"
-        alt=""
-      />
       <Grid container spacing={2}>
         {valuesData.map((item) => {
           return (

@@ -34,16 +34,14 @@ const useStyles = makeStyles((theme) => ({
     background: `white`,
     marginBottom: `3em`,
     borderRadius: '2em',
-    boxShadow:
-      'rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset',
+    borderTop: `5px solid ${COLORS.col3}`,
   },
   cardRoot2: {
     width: 'fit-content',
     paddingTop: '2em',
     borderRadius: '2em',
     marginBottom: `5em`,
-    boxShadow:
-      'rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset',
+    borderTop: `5px solid ${COLORS.col3}`,
   },
 }))
 

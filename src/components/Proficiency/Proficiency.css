@@ -10,14 +10,15 @@
         font-size: 32px;
         text-align: center;
         letter-spacing: 2px;
-        color: #3047d8
+        color: #262d7d
 }
 
 .proficiency-content{
     border-radius: 2em;
     padding: 10px;
     min-height: 100px;
-    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -30em, rgb(75 235 75 / 61%) 0px 30px 60px -30px, rgb(36 148 45 / 64%) 0px -2px 1px 0px inset;
+    margin-bottom: 16px;
+    border-top: 5px solid #3e8927;
 }
 
 .proficiency-content > h2{

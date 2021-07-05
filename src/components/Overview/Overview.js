@@ -24,14 +24,22 @@ function Overview() {
         <b class="overview-cure">&bull;</b>
       </h1>
       <p class="overview-p">
-        {yevacure} Pharmaceuticals Pvt. Ltd discovers, develops, manufactures
-        and commercializes a diverse portfolio of health medicines designed to
-        meet the real-world needs of society.
+        {yevacure} quality is authenticated by our complete control over the
+        manufacturing process right from procurement of the raw material till
+        shipment of the finished product.
       </p>
       <p class="overview-p">
-        {yevacure} is much more than the sum of its parts. We all work together
-        with a common purpose, sharing knowledge and resources, for the best
-        interest of our customers, colleagues and shareholders.
+        We have a proud association with leading medical experts. In this long
+        journey, we have always been renowned as the hallmark of ethics &
+        unwavering consistency and commitment.
+      </p>
+      <p class="overview-p">
+        <b>Why {yevacure} ?</b>
+        <br />
+        Quality has always been our key concern which is quite evident in the
+        wide range of our products being manufactured by GMP certified plants
+        and our compliance with the strictest manufacturing regulation of the
+        pharma industry.
       </p>
     </div>
   )

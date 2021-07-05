@@ -26,7 +26,7 @@ function Manufacture() {
       <p class="manufacture-p">
         {yevacure} manufactures its quality health products in the finest
         manufacturing facility that has been set up meeting stringent guidelines
-        of any regulatory body including World Health Organization.
+        of any regulatory body.
       </p>
       <p class="manufacture-p">
         The manufacturing site is well connected with excellent roads and has

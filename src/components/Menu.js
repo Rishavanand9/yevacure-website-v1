@@ -9,7 +9,7 @@ import {
 import { COLORS } from './../constants/colors'
 import withWidth from '@material-ui/core/withWidth'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
-import logo from './../assets/logo.png'
+import fullLogo from './../assets/fullLogo.png'
 import logoName from './../assets/logoName.png'
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     color: '#61892f',
     borderRadius: '2em',
+    marginTop: 25,
     '&:hover': {
       boxShadow: `0 0 40px ${COLORS.col4}`,
     },
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuContainer: {
     display: 'flex',
+    marginTop: '10px',
     alignItems: 'center',
   },
   menuItems: {
@@ -76,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
   logoImg: {},
   menuDiv: {
     position: 'absolute',
-    right: '20em',
+    right: '15em',
+    top: '5em',
   },
 }))
 
@@ -108,8 +111,8 @@ function Menu(props) {
 
   const MenuOptions = (
     <div className={classes.menuOption}>
-      <img src={logo} height={50} className={classes.logoImg} alt="" />
-      <img src={logoName} height={30} alt="" />
+      <img src={fullLogo} height={50} className={classes.logoImg} alt="" />
+      {/*<img src={logoName} height={30} alt="" />*/}
       <hr />
       <List>
         {menuOptionValues.map((item) => {
@@ -120,7 +123,6 @@ function Menu(props) {
                   {item.name}{' '}
                 </Typography>
               </a>
-              {/*<Divider className={classes.hr} />*/}
             </>
           )
         })}
@@ -130,9 +132,10 @@ function Menu(props) {
 
   const DesktopMenu = (
     <div className={classes.menuContainer}>
-      <div>
-        <img src={logo} height={50} alt="" />
-        <img src={logoName} height={30} alt="" />
+      <div style={{ marginLeft: 20, marginTop: 20 }}>
+        <img src={fullLogo} height={80} alt="" />
+
+        {/*<img src={logoName} height={30} alt="" />*/}
       </div>
       <div className={classes.menuDiv}>
         <List className={classes.menuItems}>
