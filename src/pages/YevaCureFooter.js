@@ -75,14 +75,22 @@ function YevaCureFooter() {
 
   const Images = (
     <div className={classes.icons}>
-      <img src={
-        'https://n4.sdlcdn.com/imgs/h/2/s/Muscle-Machine-MASS-3-lb-SDL032246354-5-56aea.png'
-      }
-       height={100} className={classes.img} alt="mii" />
-      <img src={
-        'https://media.istockphoto.com/vectors/label-certification-new-version-vector-id942287864?k=6&m=942287864&s=612x612&w=0&h=NKJcnddVUIO8jxUfbhcoZwF71M3ZPuuJSSj5f11k4qo='
-      }
-       height={100} className={classes.img} alt="iso" />
+      <img
+        src={
+          'https://n4.sdlcdn.com/imgs/h/2/s/Muscle-Machine-MASS-3-lb-SDL032246354-5-56aea.png'
+        }
+        height={100}
+        className={classes.img}
+        alt="mii"
+      />
+      <img
+        src={
+          'https://media.istockphoto.com/vectors/label-certification-new-version-vector-id942287864?k=6&m=942287864&s=612x612&w=0&h=NKJcnddVUIO8jxUfbhcoZwF71M3ZPuuJSSj5f11k4qo='
+        }
+        height={100}
+        className={classes.img}
+        alt="iso"
+      />
     </div>
   )
 

@@ -132,7 +132,7 @@ function Menu(props) {
 
   const DesktopMenu = (
     <div className={classes.menuContainer}>
-      <div style={{ marginLeft: 20, marginTop: 20}}>
+      <div style={{ marginLeft: 20, marginTop: 20 }}>
         <img src={fullLogo} height={80} alt="" />
 
         {/*<img src={logoName} height={30} alt="" />*/}

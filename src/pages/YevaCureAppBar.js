@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     top: 0,
     left: 0,
-    background: `#d3f1d399`,
+    background: `#ffffff99`,
     transition: 'all 0.5s ease',
     boxShadow: 'none',
     padding: '1em',
@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'flex-end',
     height: 'auto',
   },
-  stripe:{
+  stripe: {
     backgroundColor: '#262d7d',
     background: 'none',
     margin: -20,
     flexGrow: 1,
     width: '-webkit-fill-available',
-    height: 20,
-  }
+    height: '3em',
+  },
 }))
 
 function YevaCureAppBar(props) {
@@ -39,15 +39,13 @@ function YevaCureAppBar(props) {
 
   return (
     <>
+      <div className={classes.root} id="currentAppBar">
+        <AppBar position="static" className={classes.appBar}>
+          <div className={classes.stripe} />
 
-    <div className={classes.root} id="currentAppBar">
-
-      <AppBar position="static" className={classes.appBar}>
-      <div className={classes.stripe}/>
-
-        <Menu />
-      </AppBar>
-    </div>
+          <Menu />
+        </AppBar>
+      </div>
     </>
   )
 }

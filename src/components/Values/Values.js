@@ -19,7 +19,8 @@ const valuesData = [
   {
     title: 'Rich Manufacturing & Marketing Concept',
     color: '#419147',
-    description: 'Highly Skilled staff constantly thinks about designing the apt manufacturing and marketing strategies of the products.',
+    description:
+      'Highly Skilled staff constantly thinks about designing the apt manufacturing and marketing strategies of the products.',
   },
   {
     title: 'People Before Profit',

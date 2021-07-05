@@ -12,8 +12,11 @@ function VisionMission() {
         <b class="overview-yeva">&bull;</b> Vision{' '}
         <b class="overview-cure">&bull;</b>
         <p class="visionmission-p">
-          Our products, services and people will be the most valued by health
-          customers around the country
+          By incorporating a
+          triple-bottom-line approach into all aspects of our business, and with
+          Yevacure's expertise on how to nourish, protect and innovate on a
+          large scale, we are dedicated to fostering healthy people, a healthy
+          planet and a healthy business.
         </p>
       </h4>
     </div>
@@ -27,8 +30,9 @@ function VisionMission() {
         <b class="overview-cure">&bull;</b>
       </h4>
       <p class="visionmission-p">
-        To provide the best quality health products and making world a better
-        place to sustain.
+        We aim to have our finger on the pulse of emerging therapies &
+        consequently have risen with many innovative products in the Human &
+        Veterinary segment.
       </p>
     </div>
   )
