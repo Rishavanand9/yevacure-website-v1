@@ -1,5 +1,6 @@
 {
   "name": "yevacure",
+  "homepage": "https://yevacure.in/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
