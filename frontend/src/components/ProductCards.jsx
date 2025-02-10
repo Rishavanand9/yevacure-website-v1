@@ -1,31 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "../App.css"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ShoppingCart } from 'lucide-react';
+import '../App.css'
+import RatingStars from './RatingStars';
 
 const ProductCards = ({ products }) => {
-    console.log(products)
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-8'>
-            {products.map((product, index) => {
-                return (
-                    <div key={index} className='product__card'>
-                        <div className='relative'>
-                            <Link to={`/shop/${product._id}`}>
-                                <img src={product.image} alt={"product image"} className='max-h-96 md:h-64 w-full object-cover hover:scale-105 transition-all duration:300' />
-
-                            </Link>
-                            <div className='hover:block absolute top-3 right-3'>
-                                <button>
-                                    <i className="ri-shopping-cart-2-line bg-primary p-1.5 text-white hover:bg-primary-dark"></i>
-                                </button>
-                            </div>
-                        </div>
-
+        <div className="grid grid-cols-5 gap-2.5 p-6 justify-center product_card_root">
+            {products.map((product, index) => (
+                <div key={index} className="relative bg-white rounded-lg shadow-lg overflow-hidden group">
+                    {/* Product Image Container */}
+                    <div className="aspect-square w-full">
+                        <Link to={`/shop/${product._id}`}>
+                            <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+                            />
+                        </Link>
                     </div>
-                )
-            })}
+
+                    <div>
+                        <h4>{product.name}</h4>
+                        <p>₹ {product.price}</p>
+                        <RatingStars rating={product.rating} />
+                    </div>
+                </div>
+
+                
+            ))}
         </div>
-    )
+    );
 }
 
-export default ProductCards
+export default ProductCards;

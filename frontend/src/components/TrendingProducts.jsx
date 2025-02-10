@@ -4,7 +4,7 @@ import products from '../data/products.json'
 
 const TrendingProducts = () => {
 
-    const [visibleProducts, setVisibleProducts] = useState(8)
+    const [visibleProducts, setVisibleProducts] = useState(6)
 
     const loadMoreProducts = () => {
         setVisibleProducts(prevCount => prevCount + 4)
@@ -19,7 +19,12 @@ const TrendingProducts = () => {
                 added, and removed to make it nonsensical and improper Latin.
                 The first two words themselves are a truncation of dolorem ipsum.
             </p>
-            <ProductCards products={products} />
+            <ProductCards products={products.slice(0, visibleProducts)} />
+            <div className='product__btn mt-20'>
+                {visibleProducts <  products.length && (
+                    <button className='btn' onClick={loadMoreProducts}>Load More</button>
+                )}
+            </div>
         </section>
     )
 }

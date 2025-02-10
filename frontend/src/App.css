@@ -246,7 +246,7 @@ nav {
   max-width: var(--max-width-900);
   margin: 4rem auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -580,4 +580,8 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.product_card_root {
+  grid-gap: 20px;
 }
