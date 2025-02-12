@@ -19,7 +19,10 @@ app.use(cors({
 const DB_URL = process.env.MONGODB_CONNECTION_STRING
 
 const authRoutes = require("./src/users/user.route")
+const productRoutes = require("./src/products/product.route")
+
 app.use('/api/auth', authRoutes)
+app.use('/api/product', productRoutes)
 
 main().then(() => console.log("MongoDb Connected")).catch(err => console.log(err));
 
