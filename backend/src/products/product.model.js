@@ -12,6 +12,6 @@ const ProductSchema = new Schema({
     author: { type: Schema.Type.ObjectId, ref: "User", required: true }
 })
 
-const Products = new model("Product",ProductSchema);
+const Products = model("Product",ProductSchema);
 
 module.exports = Products;

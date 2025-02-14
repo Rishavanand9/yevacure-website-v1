@@ -31,5 +31,5 @@ userSchema.methods.comparePassword = (candidatePassword) => {
     return bcrypt.compare(candidatePassword, this.password)
 } 
 
-const User = new model("User", userSchema)
+const User = model("User", userSchema)
 module.exports = User

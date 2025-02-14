@@ -7,6 +7,6 @@ const ReviewSchema = new Schema({
     productId: { type: Schema.type.ObjectId, ref: "Product", required: true },
 }, {timestamps: true})
 
-const Reviews = new model("Review", ReviewSchema);
+const Reviews = model("Review", ReviewSchema);
 
 module.exports = Reviews;

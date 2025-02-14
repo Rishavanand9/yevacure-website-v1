@@ -20,9 +20,15 @@ const DB_URL = process.env.MONGODB_CONNECTION_STRING
 
 const authRoutes = require("./src/users/user.route")
 const productRoutes = require("./src/products/product.route")
+const reviewRoutes = require("./src/reviews/review.route")
+const orderRoutes = require("./src/orders/order.route")
+
 
 app.use('/api/auth', authRoutes)
 app.use('/api/product', productRoutes)
+app.use('/api/reviews', reviewRoutes)
+app.use('/api/orders', orderRoutes)
+
 
 main().then(() => console.log("MongoDb Connected")).catch(err => console.log(err));
 
